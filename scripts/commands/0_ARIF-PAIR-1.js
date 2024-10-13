@@ -46,6 +46,6 @@ module.exports.run = async function({ api, event,Threads, Users }) {
               imglove.push(fs.createReadStream(__dirname + "/cache/giflove.png"));
               imglove.push(fs.createReadStream(__dirname + "/cache/avt2.png"));
 
-        var msg = {body: `AAP DONON KA PYAR👉 ${tle} HAIN 🤐👈\n`+namee+" "+"♥️"+" "+name, mentions: arraytag, attachment: imglove}
+        var msg = {body: `लो मिल गया आपका जीवन साथी 🙂🖐️\nअब बार-बार मत बोलना सेटिंग करवाने को 😒👈\nआप दोनो का प्यार 👉 『${tle}%』 है 🤐👈\n`+namee+" "+"♥️"+" "+name, mentions: arraytag, attachment: imglove}
         return api.sendMessage(msg, event.threadID, event.messageID)
 }
