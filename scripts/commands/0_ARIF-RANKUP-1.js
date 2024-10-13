@@ -53,12 +53,12 @@ module.exports.handleEvent = async function({ api, event, Currencies, Users, get
                 const moduleName = this.config.name;
 
     var background = [
-  "https://i.imgur.com/tVCXB0q.jpeg",
-  "https://i.imgur.com/JBYox72.jpeg",
-  "https://i.imgur.com/SRRuSRk.jpeg",   "https://i.imgur.com/qhx5HLz.jpeg",
-  "https://i.imgur.com/kbB4AfZ.jpeg",
-  "https://i.imgur.com/9oxlszW.jpeg",
-  "https://i.imgur.com/cJj8LTu.jpeg",   "https://i.imgur.com/LHb5eJt.jpeg",
+  "https://i.imgur.com/ukqNbnt.jpeg",
+  "https://i.imgur.com/BAhg0bR.jpeg",
+  "https://i.imgur.com/LxROHUe.jpeg",   "https://i.imgur.com/qcF66pO.jpeg",
+  "https://i.imgur.com/lu5wfIG.jpeg",
+  "https://i.imgur.com/ibkIo6w.jpeg",
+  "https://i.imgur.com/nsPE07c.jpeg",   "https://i.imgur.com/Gylcjzq.jpeg",
 
   ];
     var rd = background[Math.floor(Math.random() * background.length)];
