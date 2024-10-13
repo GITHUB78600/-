@@ -7,7 +7,7 @@ module.exports.config = {
   prefix : true,
   description: "noprefix gif",
   category: "no prefix",
-  usages: "bye",
+  usages: "kiss",
   cooldowns: 5, 
 };
 
@@ -24,4 +24,4 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
   }
   module.exports.run = function({ api, event, client, __GLOBAL }) {
 
-  
+}
