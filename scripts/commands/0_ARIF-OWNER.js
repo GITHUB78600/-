@@ -15,7 +15,7 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
   var { threadID, messageID } = event;
   if (event.body.indexOf("owner")==0 || event.body.indexOf("Owner")==0 || event.body.indexOf("OWNER")==0 || event.body.indexOf("bot admin")==0 || event.body.indexOf("Bot admin")==0 || event.body.indexOf("BOT ADMIN")==0) {
     var msg = {
-        body: "╭•┄┅═══❁🌺❁═══┅┄•╮\n  💐  ARIF-BABU  💐\n╰•┄┅═══❁🌺❁═══┅┄•╯\n\n\n OWNER ARIF BABU ♥️🙂",
+        body: "╭•┄┅════❁🌺❁════┅┄•╮\n•—»✨【﻿आरिफ  बाबू】✨«—•\n╰•┄┅════❁🌺❁════┅┄•╯\n\n𝐎𝐖𝐍𝐄𝐑 𝐀𝐑𝐈𝐅 𝐁𝐀𝐁𝐔 ♥️🙂",
         attachment: fs.createReadStream(__dirname + `/noprefix/OWNER.jpg`)
       }
       api.sendMessage( msg, threadID, messageID);
