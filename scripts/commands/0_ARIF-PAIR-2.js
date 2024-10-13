@@ -98,7 +98,7 @@ module.exports.run = async function ({ args, Users, Threads, api, event, Currenc
   fs.writeFileSync(pathImg, imageBuffer);
   fs.removeSync(pathAvt1);
   fs.removeSync(pathAvt2);
-  return api.sendMessage({ body: ` ꕥ̈̈̈̎̈̎̈̎̈̎̈̎̈̎̈̎̈̎̈̎̈̎̈̎̊̇ꔷ̸̲̅ꔷ̸̲̲̅̅ꔷ̸̲̲̲̅̅̅ꔷ̸̲̲̲̅̅̅̅ꔷ̸̲̲̲̲̲̅̅̅̅̅ꔷ̸̲̲̲̲̅̅̅̅ꔷ̸̲̲̲̅̅̅ꔷ̸̲̲̅̅ꔷ̸̲̅ꔷ̸̲̅ꔷ̸̲̅ꔷ̸̲̅ꔷ̸̲̅ꔷ̸̲̅ꔷ̸̲̅ꔷ̸̲̅ꔷ̸̲̲̅̅ꔷ̸̲̲̲̅̅̅ꔷ̸̲̲̲̅̅̅̅ꔷ̸̲̲̲̲̲̅̅̅̅̅ꔷ̸̲̲̲̲̅̅̅̅ꔷ̸̲̲̲̅̅̅ꔷ̸̲̲̅̅ꔷ̸̲̅ꕥ̈̈̈̎̈̎̈̎̈̎̈̎̈̎̈̎̈̎̈̎̈̎̈̎̊̇̇ \n`,
+  return api.sendMessage({ body: `${name1}♥️\n${name2}`,
             mentions: [{
           tag: `${name2}`,
           id: id2
