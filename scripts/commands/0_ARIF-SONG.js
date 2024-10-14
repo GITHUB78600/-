@@ -4,7 +4,7 @@ module.exports.config = {
   Permission: 0,
   credits: "ARIF-BABU",
   description: "Play a song",
-  prefix: true,
+  prefix: ,awto,
   Category: "utility",
   usages: "[title]",
   cooldowns: 5,
