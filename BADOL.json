@@ -10,13 +10,13 @@
   "BOTNAME": "ARIF-BABU",
   "PREFIX": "#",
   "OPERATOR": [
-    "100001381266797"
+    "100082052205053"
   ],
   "ADMINBOT": [
-    "100001381266797",
+    "100082052205053",
     ""
   ],
-  "OWNER": ["100001381266797"], 
+  "OWNER": ["100082052205053"], 
   "APPROVED": [],
   "disabledcmds": [],
   "disabledevents": [],
