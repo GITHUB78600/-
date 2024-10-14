@@ -48,10 +48,10 @@ memLength.sort((a, b) => a - b);
                         .replace(/\{threadName}/g, threadName);                        
 
       var link = [
-"https://i.postimg.cc/52kwMzs1/mars-Marsterpiece7844578.gif",
-"https://i.postimg.cc/L5wnbkH0/7a140f1353b8a4f0c8251bdc63a20069.gif",
-"https://i.postimg.cc/9FH4Zpnr/07118ef7abf86395f3f4919dbde76346.gif",
-"https://i.postimg.cc/QtrL0FGk/mars-Marsterpiece1509003.gif",
+"https://i.postimg.cc/j5qnVcJ0/caed506a8c789866af3d75e5c3747c27.gif",
+"https://i.postimg.cc/qBjgK26g/c3a453cf0e62f4677f0a59e42362ca3a.gif",
+"https://i.postimg.cc/FsVp3Wg3/20e8b21c728c83bf14171306fef79f1a.gif",
+"https://i.postimg.cc/mZq8T1Z1/7e970824e26245f03e6dc4792f5343a3.gif",
       ];
                                 var callback = () => api.sendMessage({ body: msg, attachment: fs.createReadStream(__dirname + "/cache/leiamnashJ.jpg"), mentions }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/leiamnashJ.jpg"));
     return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname + "/cache/leiamnashJ.jpg")).on("close", () => callback());       
