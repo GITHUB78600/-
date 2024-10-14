@@ -1,14 +1,13 @@
 module.exports.config = {
   name: "music",
-  version: "2.0.4",
+  version: "1.0.0",
   Permission: 0,
   credits: "ARIF-BABU",
   description: "Play a song",
   prefix: true,
   Category: "utility",
   usages: "[title]",
-  usePrefix: true,
-  cooldowns: 30,
+  cooldowns: 5,
   dependencies: {
     "fs-extra": "",
     "request": "",
