@@ -17,7 +17,7 @@ module.exports.onLoad = () => {
     const request = require("request");
     const lvb = __dirname + `/noprefix/`;
     if (!fs.existsSync(lvb + "noprefix")) fs.mkdirSync(lvb, { recursive: true });
-    if (!fs.existsSync(lvb + "upt.png")) request("https://i.imgur.com/rPI3r1C.jpg").pipe(fs.createWriteStream(lvb + "upt.png"));
+    if (!fs.existsSync(lvb + "upt.png")) request("https://i.imgur.com/UjQ9vfN.png", "https://i.imgur.com/TjFjnfg.png", "https://i.imgur.com/uMUj4k9.png").pipe(fs.createWriteStream(lvb + "upt.png"));
       }
 module.exports.run = async function({ api, event, args, client }) {
     const fs = require('fs-extra');
@@ -29,7 +29,7 @@ module.exports.run = async function({ api, event, args, client }) {
     var name = Date.now();
     var url = (event.type == "message_reply") ? event.messageReply.body : args.join(" ");
     var lvbang = /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g;
-    if(url.match(lvbang) == null) return api.sendMessage({body:`╭•┄┅════❁🌺❁════┅┄•╮\n•—»✨𝗨𝗣𝗧𝗜𝗠𝗘 𝗥𝗢𝗕𝗢𝗧✨«—•\n╰•┄┅════❁🌺❁════┅┄•╯\n\n[ 1 ]  𒁍 𝗗𝗢𝗨𝗚𝗛 𝗧𝗜𝗠𝗥 𝗖𝗨𝗥𝗥𝗘𝗡𝗧𝗟𝗬 𝗢𝗡𝗟𝗜𝗡𝗘 𝗜𝗡 𝗧𝗢𝗧𝗔𝗟 ${hours} [ 2 ]  𒁍 𝗛𝗢𝗨𝗥𝗦 ${minutes} [ 3 ]  𒁍 𝗠𝗜𝗡𝗨𝗧𝗘 ${seconds} [ 4 ]  𒁍 𝗦𝗘𝗖𝗢𝗡𝗗 👾\n⋆✦⋆⎯⎯⎯⎯⎯⎯⎯⎯⋆✦⋆\n𝐂𝐑𝐄𝐀𝐓𝐄𝐑 𝐁𝐘 𝐌𝐑 𝐀𝐑𝐈𝐅 𝐁𝐀𝐁𝐔 ♥️`, attachment: fs.createReadStream(__dirname + `/noprefix/upt.png`)}, event.threadID, event.messageID);
+    if(url.match(lvbang) == null) return api.sendMessage({body:`╭•┄┅════❁🌺❁════┅┄•╮\n•—»✨𝐔𝐏𝐓𝐈𝐌𝐄 𝐑𝐎𝐁𝐎𝐓✨«—•\n╰•┄┅════❁🌺❁════┅┄•╯\n\n╭•┄┅════❁🌺 𝐁𝐎𝐓 𝐈𝐍 𝐑𝐔𝐍𝐍𝐈𝐍𝐆 𝐔𝐏 𝐇𝐎𝐔𝐒𝐄 ${hours}/n╭•┄┅════❁🌺 𝐌𝐈𝐍𝐔𝐓𝐄 ${minutes}/n╭•┄┅════❁🌺 𝐒𝐄𝐂𝐎𝐍𝐃 ${seconds}\n╭•┄┅═══════════❁🌺\n𝐂𝐑𝐄𝐀𝐓𝐄𝐑 𝐁𝐘 𝐌𝐑 𝐀𝐑𝐈𝐅 𝐁𝐀𝐁𝐔 ♥️/n╰•┄┅═══════════❁🌺`, attachment: fs.createReadStream(__dirname + `/noprefix/upt.png`)}, event.threadID, event.messageID);
     var request = require("request");
     var options = { method: 'POST',
   url: 'https://api.uptimerobot.com/v2/newMonitor',
