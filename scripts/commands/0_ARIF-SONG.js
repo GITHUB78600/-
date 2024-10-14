@@ -1,17 +1,21 @@
 module.exports.config = {
-    name: "song", 
-  version: "1.0.0", 
-  permission: 0,
+  name: "music",
+  version: "2.0.4",
+  Permission: 0,
   credits: "ARIF-BABU",
-  description: "example",
+  description: "Play a song",
   prefix: true,
-  category: "Media", 
-  usages: "user", 
-  cooldowns: 5,
+  Category: "utility",
+  usages: "[title]",
+  usePrefix: true,
+  cooldowns: 30,
   dependencies: {
-                "ytdl-core":"",
-    "simple-youtube-api":""
-        }
+    "fs-extra": "",
+    "request": "",
+    "axios": "",
+    "play-dl": "",
+    "yt-search": ""
+  }
 };
 
 module.exports.run = async ({ api, event }) => {
