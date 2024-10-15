@@ -3,7 +3,6 @@ const axios = require("axios");
 const fs = require("fs");
 const path = require("path");
 const ytSearch = require("yt-search");
-
 module.exports.config = {
   name: "song",
   version: "1.0.0",
@@ -13,7 +12,7 @@ module.exports.config = {
   prefix: true,
   category: "Media",
   usages: "user",
-  cooldowns: 5,
+  cooldowns: 0,
   dependencies: {
     "ytdl-core": "",
     "simple-youtube-api": "",
