@@ -8,7 +8,7 @@ module.exports = {
   config: {
     name: "yt",
     aliases: ["music", "play", "song"],
-    version: "1.0.1",
+    version: "1.0.0",
     Permssion: 0,
     credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
     description: "Download YouTube song from keyword search and link",
