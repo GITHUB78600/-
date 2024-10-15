@@ -1,27 +1,49 @@
-const fetch = require("node-fetch");
-const axios = require("axios");
-const fs = require("fs");
-const path = require("path");
-const ytSearch = require("yt-search");
+const fs = require('fs');
+const ytdl = require('ytdl-core');
+const { resolve } = require('path');
+async function downloadMusicFromYoutube(link, path) {
+  var timestart = Date.now();
+  if(!link) return 'Thiếu link'
+  var resolveFunc = function () { };
+  var rejectFunc = function () { };
+  var returnPromise = new Promise(function (resolve, reject) {
+    resolveFunc = resolve;
+    rejectFunc = reject;
+  });
+    ytdl(link, {
+            filter: format =>
+                format.quality == 'tiny' && format.audioBitrate == 48 && format.hasAudio == true
+        }).pipe(fs.createWriteStream(path))
+        .on("close", async () => {
+            var data = await ytdl.getInfo(link)
+            var result = {
+                title: data.videoDetails.title,
+                dur: Number(data.videoDetails.lengthSeconds),
+                viewCount: data.videoDetails.viewCount,
+                likes: data.videoDetails.likes,
+                author: data.videoDetails.author.name,
+                timestart: timestart
+            }
+            resolveFunc(result)
+        })
+  return returnPromise
+}
 
-module.exports = {
-  config: {
-    name: "yt",
-    aliases: ["music", "play", "song"],
-    version: "1.0.0",
-    Permssion: 0,
-    credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
-    description: "Download YouTube song from keyword search and link",
-    prefix: "true",
-    Category: "Media",
-    usages: "[songName] [type]",
-    prefix: "true",
-    cooldowns: 5,
-    dependencies: {
-      "node-fetch": "",
-      "yt-search": "",
-    },
-  },
+module.exports.config = {
+  name: "song", 
+  version: "1.0.0", 
+  permission: 0,
+  credits: "arif",
+  description: "example",
+  prefix: true,
+  category: "Media", 
+  usages: "user", 
+  cooldowns: 5,
+  dependencies: {
+                "ytdl-core":"",
+    "simple-youtube-api":""
+        }
+};
 
   run: async function ({ api, event, args }) {
     let songName, type;
