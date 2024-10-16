@@ -3,21 +3,20 @@ const axios = require("axios");
 const fs = require("fs");
 const path = require("path");
 const ytSearch = require("yt-search");
+return returnPromise
+}
 module.exports.config = {
-  name: "song",
-  version: "1.0.0",
-  permission: 0,
-  credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
-  description: "example",
-  prefix: true,
-  category: "Media",
-  usages: "user",
-  cooldowns: 0,
-  dependencies: {
-    "ytdl-core": "",
-    "simple-youtube-api": "",
-  },
+    name: "song",
+    version: "1.0.0",
+    permission: 0,
+    credits: "ryuko",
+    prefix: true,
+    description: "play music through youtube link or search keyword",
+    category: "with prefix",
+    usages: "play [link/args]",
+    cooldowns: 10
 };
+
 module.exports.run = async function ({ api, event, args }) {
   let songName, type;
 
