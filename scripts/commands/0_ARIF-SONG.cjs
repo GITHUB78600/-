@@ -87,14 +87,9 @@ module.exports.run = async function ({ api, event, args }) {
         fs.unlinkSync(downloadPath);
         api.unsendMessage(processingMessage.messageID);
       },
-      event.messageID
-    );
-  } catch (error) {
-    console.error(`Failed to download and send song: ${error.message}`);
-    api.sendMessage(
-      `Failed to download song: ${error.message}`,
-      event.threadID,
-      event.messageID
-    );
+      event.messageID);
+      } catch(e) {
+        return api.sendMessage('an error occurred, please try again in a moment\n' + e, event.threadID, event.messageID);
+        }
+    }
   }
-};
