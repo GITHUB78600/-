@@ -3,7 +3,6 @@ const axios = require("axios");
 const fs = require("fs");
 const path = require("path");
 const ytSearch = require("yt-search");
-return returnPromise
 }
 module.exports.config = {
     name: "song",
