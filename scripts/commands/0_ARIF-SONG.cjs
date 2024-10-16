@@ -5,15 +5,14 @@ const path = require("path");
 const ytSearch = require("yt-search");
 
 module.exports = {
-  config: {
     name: "yt",
     aliases: ["music", "play", "song"],
-    version: "1.0.1",
-    hasPermssion: 0,
+    version: "1.0.0",
+    Permssion: 0,
     credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
     description: "Download YouTube song from keyword search and link",
     prefix: true,
-    commandCategory: "Media",
+    Category: "Media",
     usages: "[songName] [type]",
     cooldowns: 5,
     dependencies: {
