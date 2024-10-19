@@ -1,26 +1,36 @@
+/* ryukov3 project */
+
 const Sequelize = require("sequelize");
 const { resolve } = require("path");
-const { DATABASE } = global.config;
+const { DATABASE } = global.Nayan;
 
 var dialect = Object.keys(DATABASE), storage;
 dialect = dialect[0]; 
-storage = resolve(__dirname, `../${DATABASE[dialect].storage}`);
+storage = resolve(__dirname, `${DATABASE[dialect].storage}`);
 
 module.exports.sequelize = new Sequelize({
         dialect,
         storage,
         pool: {
-                max: 20,
+                max: 90,
                 min: 0,
-                acquire: 60000,
-                idle: 20000
+                acquire: 90000,
+                idle: 50000
         },
         retry: {
                 match: [
-                        /SQLITE_BUSY/,
-                ],
+    Sequelize.ConnectionError,
+    Sequelize.ConnectionRefusedError,
+    Sequelize.ConnectionTimedOutError,
+    Sequelize.OptimisticLockError,
+    Sequelize.TimeoutError,
+    'SequelizeDatabaseError: Deadlock found when trying to get lock; try restarting transaction',
+    /SQLITE_BUSY/,
+    'SQLITE_BUSY',
+    'ER_LOCK_DEADLOCK'
+    ],
                 name: 'query',
-                max: 20
+                max: 90
         },
         logging: false,
         transactionType: 'IMMEDIATE',
