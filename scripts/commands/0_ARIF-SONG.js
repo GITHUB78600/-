@@ -15,7 +15,6 @@ module.exports = {
     prefix: false,
     Category: "Media",
     usages: "[songName] [type]",
-    prefix: "true",
     cooldowns: 5,
     dependencies: {
       "node-fetch": "",
