@@ -10,7 +10,7 @@ module.exports = {
   permission: 0,
   credits: "Nayan",
   description: "example",
-  prefix: 'awto',
+  prefix: true,
   category: "Media", 
   usages: "user", 
   cooldowns: 5,
