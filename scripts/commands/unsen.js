@@ -1,24 +1,24 @@
 module.exports.config = {
-  name: "uns",
+	name: "unsend",
   version: "1.0.1",
   permssion: 0,
-  credits: "★𝐌𝟗𝐇𝟒𝐌𝐌𝟒𝐃-𝐁𝟒𝐃𝟗𝐋★",
+  credits: "ARIF BABU",
   prefix: 'awto',
-  description: "Unsend Message",
-  category: "user",
-  usages: "unsend",
+  description: "MADE BY MR ARIF BABU",
+  category: "BOT MESSAGE DELET",
+  usages: "PREFIX",
   cooldowns: 0
 };
 
 module.exports.languages = {
-  "en": {
-    "returnCant": "",
-    "missingReply": "Reply to the message you want to unsend."
-  }
+	"en": {
+		"returnCant": "किसी और का मैसेज मैं कैसे डिलीट करूं 😐✌️",
+		"missingReply": "मेरे जिस मैसेज को डिलीट करना है उस मैसेज पे रिप्लाई कर के लिखो 😐✌️"
+	}
 }
 
 module.exports.run = function({ api, event, getText }) {
-  if (event.messageReply.senderID != api.getCurrentUserID()) return api.sendMessage(getText("returnCant"), event.threadID, event.messageID);
-  if (event.type != "message_reply") return api.sendMessage(getText("missingReply"), event.threadID, event.messageID);
-  return api.unsendMessage(event.messageReply.messageID);
+	if (event.messageReply.senderID != api.getCurrentUserID()) return api.sendMessage(getText("returnCant"), event.threadID, event.messageID);
+	if (event.type != "message_reply") return api.sendMessage(getText("missingReply"), event.threadID, event.messageID);
+	return api.unsendMessage(event.messageReply.messageID);
 }
