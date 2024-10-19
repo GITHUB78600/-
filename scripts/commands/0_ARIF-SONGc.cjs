@@ -5,23 +5,20 @@ const path = require("path");
 const ytSearch = require("yt-search");
 
 module.exports = {
-  config: {
-    name: "yt",
-    aliases: ["music", "play", "song"],
-    version: "1.0.0",
-    Permssion: 0,
-    credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
-    description: "example",
-    prefix: 'awto',
-    Category: "Media",
-    usages: "[songName] [type]",
-    cooldowns: 5,
-    dependencies: {
-      "node-fetch": "",
-      "yt-search": "",
-    },
-  },
-
+  name: "song", 
+  version: "1.0.0", 
+  permission: 0,
+  credits: "Nayan",
+  description: "example",
+  prefix: 'awto',
+  category: "Media", 
+  usages: "user", 
+  cooldowns: 5,
+  dependencies: {
+                "ytdl-core":"",
+    "simple-youtube-api":""
+        }
+};
   run: async function ({ api, event, args }) {
     let songName, type;
 
