@@ -1,4 +1,3 @@
-
 module.exports.config = {
 name: "AUTO-SEND-TIME",
   version: "1.0.0",
