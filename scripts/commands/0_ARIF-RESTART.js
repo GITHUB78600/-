@@ -15,5 +15,5 @@ module.exports.config = {
 
 module.exports.run = async ({ api, event, args }) => {
         const { threadID, messageID } = event;
-        return api.sendMessage(`दो मिनट रुको RESTART.. कर रहा हूँ`, threadID, () => process.exit(1));
+        return api.sendMessage(`दो मिनट रुको RESTART.. कर रहा हूँ 😉`, threadID, () => process.exit(1));
 }
