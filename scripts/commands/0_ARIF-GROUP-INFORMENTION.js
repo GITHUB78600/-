@@ -2,17 +2,20 @@ const fs = require("fs");
 const request = require("request");
 module.exports.config = {
   name: "groupinf",
-  version: "",
-  permssion: 1,
+  version: "1.0.1", 
+  permssion: 0,
   credits: "ARIF-BABU",
-  description: "MADE BY MR ARIF BABU",
-  category: "GROUP INFORMETION",
-  usages: "PREFIX",
-  prefix: true,
-  cooldowns: 5,
-  dependencies: "",
+  prefix:true,
+  description: "Admin and Bot inf",
+  category: "...",
+  cooldowns: 1,
+  dependencies: 
+  {
+    "request":"",
+    "fs-extra":"",
+    "axios":""
+  }
 };
-
 module.exports.run = async function({ api, event, args }) {
         let threadInfo = await api.getThreadInfo(event.threadID);
         var memLength = threadInfo.participantIDs.length;
